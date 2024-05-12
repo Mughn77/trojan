@@ -2,8 +2,8 @@
 // src/worker.js
 // https://github.com/ca110us/epeius/blob/main/src/worker.js
 import { connect } from "cloudflare:sockets";
-let sha224Password = '08f32643dbdacf81d0d511f1ee24b06de759e90f8edf742bbdc57d88';
-let proxyIP = "cdn.xn--b6gac.eu.org";
+let sha224Password = '82912b4d8527de972d787fc294be0c39e6ab42b3295c3176271f4c84';
+let proxyIP = "35.219.50.99";
 
 const worker_default = {
 	/**
@@ -19,9 +19,9 @@ const worker_default = {
 			if (!upgradeHeader || upgradeHeader !== "websocket") {
 				const url = new URL(request.url);
 				switch (url.pathname) {
-					case "/link":
+					case "/ghn77":
 						const host = request.headers.get('Host');
-						return new Response(`trojan://ca110us@${host}:443/?type=ws&host=${host}&security=tls`, {
+						return new Response(`trojan://ghn77@${host}:443/?type=ws&host=${host}&security=tls`, {
 							status: 200,
 							headers: {
 								"Content-Type": "text/plain;charset=utf-8",
